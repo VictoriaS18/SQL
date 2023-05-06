@@ -1,0 +1,26 @@
+-Create a clothing store database
+
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, item TEXT, front-of-house INTEGER, back-of-house INTEGER, price INTEGER);
+
+INSERT INTO clothing VALUES (1, "purple_crop_top", 5, 4, 3);
+INSERT INTO clothing VALUES (2, "biker_shorts", 3, 8, 7);
+INSERT INTO clothing VALUES (3, "shoulder_tee", 4, 3, 10);
+INSERT INTO clothing VALUES (4, "cardigan", 6, 7, 11);
+INSERT INTO clothing VALUES (5, "mini_skirt", 8, 1, 12);
+INSERT INTO clothing VALUES (6, "midi_skirt", 3, 22, 13);
+INSERT INTO clothing VALUES (7, "jumpsuit", 5, 9, 14);
+INSERT INTO clothing VALUES (8, "button_up", 4, 12, 15);
+INSERT INTO clothing VALUES (9, "mock_neck", 3, 4, 6);
+INSERT INTO clothing VALUES (10, "collared_tank", 4, 10, 16);
+INSERT INTO clothing VALUES (11, "hoodie", 7, 20, 17);
+INSERT INTO clothing VALUES (12, "mom_jeans", 3, 6, 22);
+INSERT INTO clothing VALUES (13, "split_thigh_dress", 4, 16, 20);
+INSERT INTO clothing VALUES (14, "pencil_skirt", 5, 2, 18);
+INSERT INTO clothing VALUES (15, "sweater", 6, 0, 19);
+
+-Display database ordered by price.
+SELECT price, MAX (item) FROM clothing GROUP BY price
+
+-Select all items under 20$.
+SELECT * FROM clothing WHERE price < 20
+
