@@ -39,14 +39,15 @@ SELECT MAX(price)
 FROM superstore;
 
 
-#Showing only kitchen supplies in order from least to most expensive
-SELECT*
-FROM superstore
-WHERE category='Kitchen Supplies'
-ORDER BY price;
-
-
-#Items from highest to lowest rating 
+#Furnishings with the highest rating
 SELECT*
 FROM superstore 
+WHERE category='Furnishings'
 ORDER BY average_rating desc;
+
+
+--#4 Items that have more than 50 in stock 
+SELECT*
+FROM superstore
+WHERE stock_quantity>=50
+ORDER BY item_name;
